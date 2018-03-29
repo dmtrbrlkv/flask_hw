@@ -1,0 +1,7 @@
+@app.route("/serve/<path:filepath>")
+def file_content(filename):
+    try:
+        with open(os.path.join("files", filename)) as f:
+            return f.read()
+    except:
+        return "файл {} не существует".format(filename), 404
