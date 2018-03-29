@@ -124,6 +124,7 @@ def user():
         errors = form.errors
     return jsonify({"status": status, "errors": errors})
 
+
 if __name__ == "__main__":
     app.config.update(
         DEBUG=True,
